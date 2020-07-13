@@ -500,12 +500,8 @@ char *yytext;
 	#include <string.h>
 	#include "gram.tab.h"
 	FILE *out;
-	FILE *code;
-	FILE *readcode;
-	FILE *rpn;
-	extern void getRpn();
-#line 508 "lex.yy.c"
-#line 509 "lex.yy.c"
+#line 504 "lex.yy.c"
+#line 505 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -722,9 +718,9 @@ YY_DECL
 		}
 
 	{
-#line 13 "lexer.lex"
+#line 9 "lexer.lex"
 
-#line 728 "lex.yy.c"
+#line 724 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -783,146 +779,146 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 14 "lexer.lex"
+#line 10 "lexer.lex"
 return INT;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 15 "lexer.lex"
+#line 11 "lexer.lex"
 return IF;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 16 "lexer.lex"
+#line 12 "lexer.lex"
 return THEN;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 17 "lexer.lex"
+#line 13 "lexer.lex"
 return ELSE;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 18 "lexer.lex"
+#line 14 "lexer.lex"
 return WHILE;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 19 "lexer.lex"
+#line 15 "lexer.lex"
 return DO;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 20 "lexer.lex"
+#line 16 "lexer.lex"
 return READ;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 21 "lexer.lex"
+#line 17 "lexer.lex"
 return LPAR;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 22 "lexer.lex"
+#line 18 "lexer.lex"
 return RPAR;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 23 "lexer.lex"
+#line 19 "lexer.lex"
 return LCBRA;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 24 "lexer.lex"
+#line 20 "lexer.lex"
 return RCBRA;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 25 "lexer.lex"
+#line 21 "lexer.lex"
 return ADD;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 26 "lexer.lex"
+#line 22 "lexer.lex"
 return SUB;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 27 "lexer.lex"
+#line 23 "lexer.lex"
 return MUL;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 28 "lexer.lex"
+#line 24 "lexer.lex"
 return DIV;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 29 "lexer.lex"
+#line 25 "lexer.lex"
 return ASSIGN;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 30 "lexer.lex"
+#line 26 "lexer.lex"
 return EQ;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 31 "lexer.lex"
+#line 27 "lexer.lex"
 return NOTEQ;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 32 "lexer.lex"
+#line 28 "lexer.lex"
 return GT;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 33 "lexer.lex"
+#line 29 "lexer.lex"
 return LT;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 34 "lexer.lex"
+#line 30 "lexer.lex"
 return GTEQ;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 35 "lexer.lex"
+#line 31 "lexer.lex"
 return LTEQ;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 36 "lexer.lex"
+#line 32 "lexer.lex"
 return AND;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 37 "lexer.lex"
+#line 33 "lexer.lex"
 return OR;
 	YY_BREAK
 case 25:
 /* rule 25 can match eol */
 YY_RULE_SETUP
-#line 38 "lexer.lex"
+#line 34 "lexer.lex"
 return COM;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 39 "lexer.lex"
+#line 35 "lexer.lex"
 {yylval = *yytext; return VAR;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 40 "lexer.lex"
+#line 36 "lexer.lex"
 {yylval = atoi(yytext); return NUM;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 41 "lexer.lex"
+#line 37 "lexer.lex"
 ECHO;
 	YY_BREAK
-#line 926 "lex.yy.c"
+#line 922 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1927,7 +1923,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 41 "lexer.lex"
+#line 37 "lexer.lex"
 
 
 int main(int argc, char const *argv[]){
@@ -1937,13 +1933,7 @@ int main(int argc, char const *argv[]){
 			printf("\033[0;33m");
 			printf("Trwa kompilowanie kodu: %s\nProszę czekać...\n", argv[1]);
 			printf("\033[0m");
-			out = fopen("temp.asm", "w");
-			rpn = fopen("rpn.txt", "w");
-			code = fopen("code.txt", "w");
-
-			char symbols[] = "2+3*5-1";
-			getRpn(symbols);
-
+			out = fopen("temp.txt","w");
 			yyparse();
 			fclose(out); 
 			fclose(yyin);

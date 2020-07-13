@@ -4,10 +4,6 @@
 	#include <string.h>
 	#include "gram.tab.h"
 	FILE *out;
-	FILE *code;
-	FILE *readcode;
-	FILE *rpn;
-	extern void getRpn();
 %}
 
 %%
@@ -18,22 +14,30 @@
 "dopoki" return WHILE;
 "wykonaj" return DO;
 "wyswietl" return READ;
-"(" return LPAR;
-")" return RPAR;
-"{" return LCBRA;
-"}" return RCBRA;
-"+" return ADD;
-"-" return SUB;
-"*" return MUL;
-"/" return DIV;
+"+" return PLUS;
+"-" return MINUS;
+"*" retrun STAR;
+"\\" return SLASHS;
+"\" return SLASH;
 "=" return ASSIGN;
 "==" return EQ;
 "!=" return NOTEQ;
-">" return GT;
+">" return GR;
+">=" return GREQ;
 "<" return LT;
-">=" return GTEQ;
 "<=" return LTEQ;
+"("  return LPAREN;
+")"  return RPAREN;
+"["  return LQPAREN;
+"]"  return RQPAREN;
+"{" return LBRACE;
+"}" return RBRACE;
 "i" return AND;
+"++" return INCR;
+"-=" return MINUSassign;
+"!" return NOT;
+"+=" return PLUSassign;
+"--" return DECR;
 "lub" return OR;
 "//".*"\n" return COM;
 [a-zA-z][a-zA-Z0-9]* {yylval = *yytext; return VAR;}
@@ -47,13 +51,7 @@ int main(int argc, char const *argv[]){
 			printf("\033[0;33m");
 			printf("Trwa kompilowanie kodu: %s\nProszę czekać...\n", argv[1]);
 			printf("\033[0m");
-			out = fopen("temp.asm", "w");
-			rpn = fopen("rpn.txt", "w");
-			code = fopen("code.txt", "w");
-
-			char symbols[] = "2+3*5-1";
-			getRpn(symbols);
-
+			out = fopen("temp.txt","w");
 			yyparse();
 			fclose(out); 
 			fclose(yyin);

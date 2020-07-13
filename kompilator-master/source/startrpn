@@ -1,4 +1,0 @@
-clear
-gcc -o fixrpn fixrpn.c
-./fixrpn
-cat rpn.txt

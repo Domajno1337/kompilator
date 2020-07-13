@@ -1,0 +1,13 @@
+rm asm.test
+rm asmtest.c
+rm code.txt
+rm fixrpn fixrpn.c
+rm gram.tab.*
+rm lex.yy.*
+rm nok.pjp
+rm read readtest.c
+rn rpn.txt
+rm stack
+rm startrpn
+rm temp.asm
+rm stack
