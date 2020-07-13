@@ -1,0 +1,23 @@
+liczba x = 5
+liczba y
+liczba y = x
+
+jezeli (x >= 5) wtedy { 
+	x = 10
+	y = 12
+	wyswietl x
+} w przeciwnym wypadku { 
+	x = 0 
+	y = -12
+	wyswietl y
+}
+
+liczba z = 5
+dopoki (z < 0) wykonaj {
+	x = x + 1
+	z = x + y
+}
+
+
+
+

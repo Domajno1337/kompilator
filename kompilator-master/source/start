@@ -1,0 +1,8 @@
+clear
+rm gram.tab.*
+rm lex.yy.*
+rm kompilator temp.asm
+make
+./kompilator ok.pjp
+cat temp.asm
+cat code.txt
